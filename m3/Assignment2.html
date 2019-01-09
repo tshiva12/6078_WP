@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn by Doing</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+	<style>
+	.Learning {
+		border: 25px solid lightblue;
+		/*border-width: 5px;*/
+		margin-top: 25px;
+  		/*margin-bottom: 30px;*/
+  		/*margin-right: 80px;*/
+  		/*margin-left: 80px;*/
+  		padding: 25px;
+	}
+	.right {
+		width: 0;
+		height: 0;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 20px solid blue; 
+	}
+	.left {
+		width: 0;
+		height: 0;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 20px solid white; 
+	}
+	</style>
+</head>
+<body>
+	<div class="arrow" style="text-align: right;height:40px;display: flex">
+		<div style="background-color: blue;width: 40px">
+		</div>
+		<div class="right">
+		</div>
+		<div style="font-size: 16px;width: 200px;background-color: white;margin-right: 5px">
+			<p><strong>Learning by doing</strong></p>
+		</div>
+		<div class="left" style="background-color: blue">
+		</div>
+		<div style="background-color: blue;width: 120%">
+		</div>
+	</div>
+
+	<div class="Learning">
+		<br>
+		<p>1.Each computer has a built-in instruction set that it knows how to execute by design.</p>
+		<img src="hint.jpg" width="25px">
+		<div class="alert alert-warning alert-dismissible">
+    		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Recall that we use the term computation to mean "the execution of a sequence of instructions by a computer with the intention of solving a given problem".
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="optradio" checked>true</label>
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="optradio" checked>false</label>
+		</div>
+		<div class="alert alert-danger alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span class="glyphicon glyphicon-remove"></span>
+			<strong>Incorrect.</strong>Each computer has a set of primitive instructions that it is "wired" to execute. We call this the instruction set of the compiler.
+		</div>
+		<hr class="dotted">
+		<div style="height: 25px">
+		</div>
+		<p>2.The computer uses intelligence to execute instructions.</p>
+		<img src="hint.jpg" width="25px">
+		<div class="alert alert-warning alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Recall that we said a computer executes the instructions given to it mechanically.
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="optradio" checked>true</label>
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="optradio" checked>false</label>
+		</div>
+		<div class="alert alert-success alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span class="glyphicon glyphicon-ok"></span>
+			<strong>Correct.</strong> A computer executes instructions automatically. Its main task is to simply execute the instructions given to it(from its instruction set) and remember their results as the computation goes on. The part that may require intelligence is expressing a computation in terms of those instructions.
+		</div>
+	</div>
+	<div class="Sample" style="text-align: right;background-color: lightblue;height:40px">
+		<p>Reset this activity</p>
+	</div>
+</body>
+</html>
