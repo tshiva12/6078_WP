@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn by Doing</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="abc.css">
+</head>
+<body>
+	<script>
+		function check(temp) {
+			console.log(temp)
+				switch(temp) {
+					case "QT":
+						document.getElementById("QT").style.display="block";
+						document.getElementById("QF").style.display="none";
+					break;
+					case "QF":
+						document.getElementById("QF").style.display="block";
+						document.getElementById("QT").style.display="none";
+					break;
+					case "QT1":
+						document.getElementById("QT1").style.display="block";
+						document.getElementById("QF1").style.display="none";
+					break;
+					case "QF1":
+						document.getElementById("QF1").style.display="block";
+						document.getElementById("QT1").style.display="none";
+					break;
+					default:
+					break;
+				}
+		}
+		function myhint(id) {
+			var a=document.getElementById(id);
+			a.style.setProperty("display", "")
+		}
+		function myfunction() {
+			location.reload();
+		}
+	</script>
+	<div class="arrow" id="arrow">
+		<div style="background-color: blue;width: 40px">
+		</div>
+		<div class="right">
+		</div>
+		<div style="font-size: 16px;width: 200px;background-color: white;margin-right: 5px">
+			<p><strong>Learning by doing</strong></p>
+		</div>
+		<div class="left" style="background-color: blue">
+		</div>
+		<div style="background-color: blue;width: 120%">
+		</div>
+	</div>
+
+	<div class="Learning">
+		<div class="jumbotron">
+			<center><h1 style="max-height: 30px">Mock Quiz</h1></center>	
+		</div>
+		<p>1.Each computer has a built-in instruction set that it knows how to execute by design.</p>
+		<img src="hint.jpg" alt="Image Not Found" width="25px" data-toggle="collapse" data-target="#demo">
+		<div id="demo" class="collapse">
+			<div class="alert alert-warning alert-dismissible" id = "hint">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Recall that we use the term computation to mean "the execution of a sequence of instructions by a computer with the intention of solving a given problem".
+			</div>
+	    </div>
+		<div class="radio">
+			<label><input type="radio" name="boolean" value="QT" onclick="check(value)">true</label>
+		</div>
+		<div id="QT" class="alert alert-success alert-dismissible" style="display: none">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong>Correct!!!</strong>
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="boolean" value="QF" onclick="check(value)">false</label>
+		</div>
+		<div id="QF" class="alert alert-danger alert-dismissible" style="display: none">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span class="glyphicon glyphicon-remove"></span>
+			<strong>Incorrect.</strong>Each computer has a set of primitive instructions that it is "wired" to execute. We call this the instruction set of the compiler.
+		</div>
+		<hr class="dotted">
+		<div style="height: 25px">
+		</div>
+		<p>2.The computer uses intelligence to execute instructions.</p>
+		<img src="hint.jpg" alt="Image Not Found" width="25px" data-toggle="collapse" data-target="#demo">
+		<div id="demo" class="collapse">
+			<div class="alert alert-warning alert-dismissible" id = "hint">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Recall that we use the term computation to mean "the execution of a sequence of instructions by a computer with the intention of solving a given problem".
+			</div>
+	    </div>
+		<div class="radio">
+			<label><input type="radio" name="boolean1" value="QT1" onclick="check(value)">true</label>
+		</div>
+		<div id="QT1" class="alert alert-danger alert-dismissible" style="display: none">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong>Incorrect!!!</strong>
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="boolean1" value="QF1" onclick="check(value)">false</label>
+		</div>
+		<div id="QF1" class="alert alert-success alert-dismissible" style="display: none">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span class="glyphicon glyphicon-ok"></span>
+			<strong>Correct.</strong> A computer executes instructions automatically. Its main task is to simply execute the instructions given to it(from its instruction set) and remember their results as the computation goes on. The part that may require intelligence is expressing a computation in terms of those instructions.
+		</div>
+	</div>
+	<div class="Sample" style="text-align: right;background-color: lightblue;height:40px">
+		<p onclick="myfunction()" style="color: darkblue">Reset this activity</p>
+	</div>
+</body>
+</html>
