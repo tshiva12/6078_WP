@@ -1,0 +1,38 @@
+.arrow {
+	text-align: right;
+	height:40px;
+	display: flex;
+}
+.right {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid blue; 
+	}
+.left {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid white; 
+	}
+.Sample {
+	text-align: right;
+	background-color: lightblue;
+	height:40px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.quiz {
+	border: 25px solid lightblue;
+	margin-top: 0px;
+	margin-bottom: 00px;
+	padding: 25px;
+}
+#Previous {
+	float : left;
+}
+#Next {
+	float : right;
+}

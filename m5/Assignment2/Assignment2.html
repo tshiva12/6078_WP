@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+	<title>Learn by doing</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type = "text/javascript" src = "quiz.js"></script>
+</head>
+<body>
+	<div class="arrow" id="arrow">
+		<div style="background-color: blue;width: 40px">
+		</div>
+		<div class="right">
+		</div>
+		<div style="font-size: 16px;width: 200px;background-color: white;margin-right: 5px">
+			<p><strong>Learning by doing</strong></p>
+		</div>
+		<div class="left" style="background-color: blue">
+		</div>
+		<div style="background-color: blue;width: 120%">
+		</div>
+	</div>
+	<div class="quiz" id ="quiz">
+		<div class="jumbotron">
+			<center><b><h1>Mock Quiz</h1></b></center>
+		</div>
+		<ul>
+			<li><p id = "question"></p></li>
+			<img src="hint.jpg" alt="Image Not Found" width="25px" data-toggle="collapse" data-target="#demo">
+			<div id="demo" class="collapse">
+				<div class="alert alert-warning alert-dismissible" id = "hint">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				</div>
+	    	</div>
+	    	<div id = "radio">
+	    	</div>
+			<div id = "feedback">
+			</div>
+		</ul>
+		<div class="row">
+			<div class="col-sm-6">
+				<button type="button" class="btn btn-info" id = "Previous" onclick="previous1()" >Previous</button>
+			</div>
+			<div class="col-sm-6">
+				<button type="button" class="btn btn-info" id = "Next" onclick="next1()" >Next</button>
+			</div>
+		</div>
+	</div>
+	<div class="Sample">
+		<p onclick="myFunction()" style="color: darkblue">Reset this Activity</p>
+	</div>
+</body>
+</html>
