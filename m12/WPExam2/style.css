@@ -1,0 +1,13 @@
+.comment {
+	border: 25px solid lightblue;
+	margin-top: 0px;
+	margin-bottom: 00px;
+	padding: 25px;
+}
+.Sample {
+	text-align: right;
+	background-color: lightblue;
+	height:40px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}

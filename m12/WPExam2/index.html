@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comment</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script type = "text/javascript" src = "validate.js"></script> -->
+</head>
+<body>
+	<script>
+		function getwords() {
+			text = usr.value;
+  			text2 = comments.value;;
+  			document.getElementById("para").innerHTML += '<p>'+text
+  			document.getElementById("para").innerHTML += '<p>'+text2
+  			document.getElementById("usr").value = ""
+  			document.getElementById("comments").value = ""  			
+		}
+
+		function validate() {
+			var username = document.getElementById('user').value;
+			var password = document.getElementById('pwd').value;
+
+			if (password == "" || username == "") {
+				alert("Please Enter password or username")
+			} else if (password == "shiva" && username != "") {
+				alert("Comment posted successfully");
+				var comment1 = [];
+				var commentName = [];
+				comment1 = document.getElementById('comments').value;
+				commentName = document.getElementById('user').value;
+			} else {
+				alert("Wrong Password")
+			}
+ 		}
+
+		function myFunction() {
+  			location.reload();
+		}
+	</script>
+	<div class = "comment" id="comment">
+		<div class="jumbotron">
+			<h1><b><center>Post Your Comment</center></b></h1>
+		</div>
+  		<form>
+  			<div class="form-group">
+  				<label for="usr">Name:</label>
+      			<input type="text" class="form-control" id="user">
+      			<br>
+      			<label for="usr">Comment:</label>
+				<textarea class="form-control" id="comments" rows="5"></textarea>
+				<br>
+				<label for="pwd">Password:</label>
+      			<input type="password" class="form-control" id="pwd">
+				<br>
+				<input type="button" onclick="validate()" value="Post Your Comment" /> <br>
+				<p id="para"></p>
+			</div>
+</form>
+	</div>
+	<div class="Sample">
+		<p onclick="myFunction()" style="color: darkblue">Reset this Activity</p>
+	</div>
+</body>
+</html>
