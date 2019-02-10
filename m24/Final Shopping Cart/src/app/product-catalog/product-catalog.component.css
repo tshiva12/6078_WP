@@ -1,0 +1,12 @@
+#imgs{
+    height:40%;
+    width: 20%;
+}
+.unavailable{
+    background:skyblue;font-family:verdana;color:#fff;padding:30px;
+}
+h2{
+    font-size: 48px;
+    padding:30px;
+    margin-left: 5%;
+}

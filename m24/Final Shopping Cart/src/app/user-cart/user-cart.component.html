@@ -1,0 +1,60 @@
+<div class="container" *ngIf="cart.length!=0"> 
+  <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th class="text-center">Price</th>
+                      <th class="text-center">Total</th>
+                      <th> </th>
+                  </tr>
+              </thead>
+              <tbody >
+                  <tr *ngFor="let product of cart;index as i">
+                      <td class="col-md-6" *ngIf="product!=null">
+                      <div class="media">
+                          <a class="thumbnail pull-left" href="#"> <img class="media-object" src="assets/img/{{product.image}}" style="width: 72px; height: 72px;"> </a>
+                          <div class="media-body">
+                              <h4 class="media-heading">{{product.title}}</h4>
+                              <!-- <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span> -->
+                          </div>
+                      </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                            <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="product.quantity" value="{{product.quantity}}">
+                            </td>
+                      <!-- <p>{{product.quantity}}</p> -->
+                      <td class="col-md-1 text-center"><strong>{{product.price}}</strong></td>
+                      <td class="col-md-1 text-center"><strong>{{product.price*product.quantity}}</strong></td>
+                      <td class="col-md-1">
+                      <button type="button" class="btn btn-danger" (click)="remove(i)">
+                          <span class="glyphicon glyphicon-remove"></span> Remove
+                      </button></td>
+                  </tr>
+                  
+                  <tr>
+                      <td>   </td>
+                      <td>   </td>
+                      <td>   </td>
+                      <td>
+                      <button type="button" class="btn btn-default" routerLink="/productCatalog">
+                          <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                      </button></td>
+                      <td>
+                      <button type="button" class="btn btn-success" routerLink="/checkout">
+                          Checkout <span class="glyphicon glyphicon-play"></span>
+                      </button></td>
+                  </tr> 
+                
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+<div class="container" *ngIf="cart.length==0">
+  <h3>Your cart is Empty!!</h3>
+  <button type="button" class="btn btn-success" routerLink="/productCatalog">
+    <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+</button>
+</div>

@@ -1,0 +1,51 @@
+
+<div class="container">
+  <div class ="row">
+      <div class = "col-md-4 well" id = "image">
+          <div><img src="assets/img/{{prod.image}}" id="imgs" class="img-responsive"></div>
+      </div>   
+      <div class = "col-md-8">
+              <div class="col-md-9">
+                  <div  class="row ">
+                      <div class="col-md-12 well">
+                        <h4>{{prod.title}}</h4>
+                      </div>
+                  </div>
+                  <div  class="row">
+                      <div class="col-md-12 well">
+                          <h6>{{prod.description}}</h6>
+                      </div>
+                  </div>
+                  <div  class="row">
+                    <div class="col-md-12 well">
+                        <h6>{{prod.rating}}</h6>
+                    </div>
+                </div>
+                  <div  class="row">  
+                <button type="button" class="btn btn-primary" (click)="add(prod)">Add To Cart</button><br> </div>   
+                <div *ngIf="added">
+                        <div  class="row"> 
+                            <h4>product is successfully added to your cart</h4>
+                    <button type="button" class="btn btn-success" routerLink="/productCatalog">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                    </button>
+                    <button type="button" class="btn btn-primary" routerLink="/cart">View Cart</button><br>
+                </div>
+              </div> 
+
+              <div class="row">
+              <div class="form-group">
+                <label for="comment">User Review :</label>
+                <textarea class="form-control well" rows="4" placeholder="Review" id="review" [(ngModel)]="rev" name="review" ></textarea><br>
+                <button type="button" class="btn btn-primary" (click)="reviews()">Submit your reviews</button>  
+            </div> </div> 
+            <label>Reviews So Far:</label><div  class="row" *ngFor="let rev of prod.review">
+                    <div class="col-md-12 well">
+                        <h6>{{rev}}</h6>
+                    </div>
+                </div>
+          </div>   
+  </div>
+  <hr>
+</div>
+</div>
